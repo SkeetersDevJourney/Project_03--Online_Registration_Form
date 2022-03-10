@@ -1,5 +1,162 @@
+/* --- Universal --- */
+
+* {
+  box-sizing: border-box;
+}
+
+/* --- General --- */
+
 body {
+  font-family: 'Literata', serif; 
+  font-weight: 500;
+  font-size: 1.1em;
+  letter-spacing: .03rem;
+  line-height: 1.2;
+  
   width: 100%;
-  height: 100vh;
   background-image: linear-gradient(to bottom right, cornflowerblue, blueviolet );
+  background-repeat: no-repeat;
+  background-size: cover;
+}
+
+.number {
+  background-color: rgba(0,0,0,.7);
+  color: ghostwhite;
+  width: 35px;
+  height: 35px;
+  line-height: 32px;
+  margin-right: 4px;
+  border-radius: 50%;
+  display: inline-block;
+  text-align: center;
+  
+}
+
+header, .signup-container, footer {
+  text-align: center;
+}
+
+/* --- Layout --- */
+
+main {
+  width: 100%;
+}
+
+.signup-container, .form-container {
+  max-width: 768px;
+  margin: 0 auto;
+}
+
+.inln {
+  display: inline-block;
+}
+
+/* --- Header --- */
+
+header {
+  background-color: rgba(0,0,0,.7);
+  color: ghostwhite;
+}
+
+h1 {
+  font-size: 1.4em;
+  margin: 0 auto;
+  padding: 1em 0;
+  text-transform: uppercase;
+}
+
+/* --- Sign Up Top --- */
+
+.signup-top {
+  padding-bottom: 10px;
+  margin: 0 20px 4px;
+  border-bottom: 5px solid rgba(0,0,0,.7);
+}
+
+/* --- Contact Info Fieldset --- */
+
+.contact-info {
+  border-top: 3px solid rgba(0,0,0,.7);
+}
+
+legend {
+  float: left;  
+    /* this float allows border to wrap around legend text normally */
+  font-size: 1.35em;
+  font-weight: 800;
+  padding: .75em 0;
+}
+
+form {
+  margin: 0 20px;
+}
+
+label {
+  clear: both;
+  display: block;
+  font-size: 1.2em;
+  padding: .25em 0;
+  
+}
+
+.contact-info input, select, textarea, button {
+  width: 100%;
+  font-size: 1.1em;
+  padding: .75em;
+  margin: .5em auto;
+}
+
+input, select, textarea, button {
+  border-radius: 5px;
+}
+
+input::placeholder { 
+  text-align: right;
+}
+
+textarea::placeholder {
+  text-align: center;
+}
+
+input:focus, textarea:focus {
+  outline: 4px solid rgba(0,0,0,.6);
+}
+
+/* --- Newsletter Fieldset --- */
+
+.newsletter-info {
+  border-top: 3px solid rgba(0,0,0,.7);
+  margin-top: 20px;
+}
+
+.newsletter-info label {
+  margin-left: 5px;
+  margin-bottom: 15px;
+
+}
+
+label.last-opt {
+  margin-bottom: 25px;
+}
+
+button {
+  text-transform: uppercase;
+  color: ghostwhite;
+  font-weight: 500;
+  background-color: rgba(0,0,0,.7);
+}
+
+/* button:focus {
+
+} */
+
+/* --- Media Queries --- */
+
+@media screen and (min-width: 768px) {
+}
+
+
+
+@media screen and (min-width: 1024px) {
+
 }

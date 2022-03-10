@@ -37,10 +37,10 @@ main {
  * `article` contexts in Chrome, Firefox, and Safari.
  */
 
-h1 {
+/* h1 {
   font-size: 2em;
   margin: 0.67em 0;
-}
+} */
 
 /* Grouping content
    ========================================================================== */
@@ -166,6 +166,9 @@ textarea {
   font-size: 100%; /* 1 */
   line-height: 1.15; /* 1 */
   margin: 0; /* 2 */
+  border-style: none;
+  border: none;
+  background-color: ghostwhite;
 }
 
 /**
@@ -176,6 +179,7 @@ textarea {
 button,
 input { /* 1 */
   overflow: visible;
+  border: none;
 }
 
 /**
@@ -222,12 +226,19 @@ button:-moz-focusring,
   outline: 1px dotted ButtonText;
 }
 
+*,*:focus, *:hover {
+ outline: none;
+}
+
 /**
  * Correct the padding in Firefox.
  */
 
 fieldset {
   padding: 0.35em 0.75em 0.625em;
+  border: none;
+  margin: 0;
+  padding: 0;
 }
 
 /**
@@ -238,13 +249,21 @@ fieldset {
  */
 
 legend {
-  box-sizing: border-box; /* 1 */
-  color: inherit; /* 2 */
-  display: table; /* 1 */
-  max-width: 100%; /* 1 */
-  padding: 0; /* 3 */
-  white-space: normal; /* 1 */
+  margin: 0;
+  padding: 0;
 }
+
+/* 
+  legend {
+  box-sizing: border-box;  1 
+  color: inherit;  2 
+  display: table;  1 
+  max-width: 100%;  1 
+  padding: 0;  3 
+  white-space: normal;  1 
+  } 
+
+*/
 
 /**
  * Add the correct vertical alignment in Chrome, Firefox, and Opera.
