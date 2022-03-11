@@ -77,6 +77,15 @@ footer {
 
 /* --- Contact Info Fieldset --- */
 
+.flex-contactinfo {
+  display: flex;
+  flex-direction: column;
+}
+
+.flex {
+  margin-top: 10px;
+}
+
 .contact-info p {
   clear: both;
   font-size: .85em;
@@ -110,7 +119,6 @@ label {
   font-size: 1.1em;
   padding: 20px;
   margin: auto;
-  max-height: 3.5em;
 }
 
 input, select, textarea, button {
@@ -126,28 +134,29 @@ input::placeholder {
 }
 
 /* --- Newsletter Fieldset --- */
+.news-item {
+  padding: 0;
+  margin: 5px 0;
+}
+
+.flex-newsletterinfo {
+  clear: both;
+  display: flex;
+  flex-direction: column;
+}
 
 .newsletter-info {
   border-top: 3px solid rgba(0,0,0,.7);
-  margin-top: 20px;
-}
-
-.newsletter-info label {
-  margin-left: 5px;
-  margin-bottom: 15px;
-
+  margin-top: 25px;
 }
 
 .optgroup:nth-child(even) {
   background-color: grey;
 }
 
-label.last-opt {
-  margin-bottom: 25px;
-}
-
 textarea {
   padding: 15px;
+  margin: 10px 0;
   min-height: 90px;
 }
 
@@ -169,6 +178,7 @@ button {
   font-weight: 500;
   background-color: rgba(0,0,0,.7);
   margin-top: 20px;
+  min-height: 65px;
 }
 
 button:focus {
@@ -178,10 +188,6 @@ button:focus {
   transition: all .3s;
   box-shadow: 0 0 10px 6px rgba(0, 0, 0, 0.5);
 }
-
-/* button:focus {
-
-} */
 
 /* --- Media Queries --- */
 
