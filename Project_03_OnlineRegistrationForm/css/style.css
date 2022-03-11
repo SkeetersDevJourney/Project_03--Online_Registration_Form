@@ -7,216 +7,225 @@
 /* --- General --- */
 
 body {
-  font-family: 'Literata', serif; 
+  font-family: 'Literata', serif;
   font-weight: 500;
-  font-size: 1.1em;
-  letter-spacing: .03rem;
-  line-height: 1.2;
+  display: flex;
+  flex-direction: column;
+  justify-content: flex-start;
   width: 100%;
   min-height: 100vh;
-  background-image: linear-gradient(to bottom right, cornflowerblue, blueviolet );
-  background-repeat: no-repeat;
-  background-size: cover;
-}
-
-.number {
-  display: inline-block;
-  background-color: rgba(0,0,0,.7);
-  color: ghostwhite;
-  width: 35px;
-  height: 35px;
-  line-height: 32px;
-  margin-right: 4px;
-  border-radius: 50%;
-}
-
-/* --- Layout --- */
-
-main {
-  width: 100%;
-}
-
-.signup-container, .form-container {
-  max-width: 768px;
-  margin: 0 auto;
-}
-
-.inln {
-  display: inline-block;
-}
-
-.align-c {
-  text-align:center;
-}
-
-/* --- Header --- */
-
-header {
-  background-color: rgba(0,0,0,.65);
-  color: ghostwhite;
-}
-
-h1 {
-  font-size: 1.4em;
-  margin: 0 auto;
-  padding: 1.25em 0;
-  text-transform: uppercase;
+  font-size: 1.1em;
+  background: linear-gradient(to bottom right, #b30895, #3103da) no-repeat;
 }
 
 footer {
   margin-top: auto;
+    /* this line combined with the body flex box + height = 100vh will create a sticky footer */
 }
 
-/* --- Sign Up Top --- */
-
-.signup-top {
-  padding-bottom: 10px;
-  margin: 0 20px 4px;
-  border-bottom: 5px solid rgba(0,0,0,.7);
+main {
+  max-width: 700px;
+  padding: 0 15px;
+  margin: 0 auto;
 }
 
-/* --- Contact Info Fieldset --- */
-
-.flex-contactinfo {
-  display: flex;
-  flex-direction: column;
+.align-center, textarea::placeholder {
+  text-align: center;
 }
 
-.flex {
-  margin-top: 10px;
-}
-
-.contact-info p {
-  clear: both;
-  font-size: .85em;
-}
-
-.contact-info {
-  border-top: 3px solid rgba(0,0,0,.7);
+h1, h2, legend, button {
+  font-weight: 800;
 }
 
 legend {
-  float: left;  
-    /* this float allows the form border to wrap around the legend normally */
+  float: left; 
+    /* I found this to be the most straight forward method of dealing with the legend sitting on top of the fieldset border */
   font-size: 1.35em;
-  font-weight: 800;
   padding: 1em 0;
 }
 
-form {
-  padding: 0 20px;
-}
-
-label {
+.hint, .newsletter-container {
   clear: both;
-  display: block;
-  font-size: 1.2em;
-  padding: .75em 0;
 }
 
-.contact-info input, select, textarea, button {
-  width: 100%;
-  font-size: 1.1em;
-  padding: 20px;
-  margin: auto;
-}
-
-input, select, textarea, button {
-  border-radius: 10px;
-}
-
-input::placeholder { 
-  text-align: right;
-}
-
-#zip {
-  width: 50%;
-}
-
-/* --- Newsletter Fieldset --- */
-.news-item {
-  padding: 0;
-  margin: 5px 0;
-}
-
-.flex-newsletterinfo {
-  clear: both;
-  display: flex;
-  flex-direction: column;
-}
-
-.newsletter-info {
-  border-top: 3px solid rgba(0,0,0,.7);
-  margin-top: 25px;
-}
-
-.optgroup:nth-child(even) {
-  background-color: grey;
-}
-
-textarea {
-  padding: 15px;
-  margin: 10px 0;
-  min-height: 90px;
-}
-
-textarea::placeholder {
-  text-align: center;
+.inln {
+  display: inline-block;
+  margin-left: 10px;
 }
 
 input:focus, textarea:focus, select:focus {
   outline: 4px solid rgba(0,0,0,.4); 
   box-shadow: 
     inset 0 0 10px 3px rgba(0, 0, 0, 0.25),
-          0 0 10px 6px rgba(0, 0, 0, 0.5);
+          0 0 10px 10px rgba(0, 0, 0, 0.35);
   transition: all .3s;
+}
+
+input:hover, textarea:hover, select:hover {
+  background: rgb(240, 240, 240);
+}
+
+/* --- Header --- */
+
+header {
+  background-color: rgba(0,0,0,.65);
+}
+
+h1 {
+  font-size: 1.5rem;
+  padding: 1.25em 0;
+  text-transform: uppercase;
+  color: ghostwhite;
+}
+
+/* --- Sign Up Section --- */
+
+.signup {
+  padding-top: 2em;
+  padding-bottom: 3em;
+  margin-top: 20px;
+  margin-bottom: 6px;
+  border-bottom: 4px solid rgba(0,0,0,.65);;
+}
+
+h2 {
+  font-size: 1.25rem;
+  margin-bottom: .5em;
+}
+
+/* --- Contact Information --- */
+
+form {
+  border-top: 2px solid rgba(0,0,0,.65);;
+}
+
+.hint {
+  text-align: left;
+  font-size: .85em;
+}
+
+.contact-container, .newsletter-container {
+  display: flex;
+  flex-direction: column;
+  justify-content: flex-start;
+  margin-top: 20px;
+}
+
+.contact-label, .contact-input {
+  font-size: 1.25rem;
+  text-align: left;
+  min-width: 100%;
+  padding: .5em 0;
+}
+
+input, select, textarea, button {
+  width: 100%;
+  padding: 20px;
+  border: none;
+  border-radius: 15px;
+}
+
+input::placeholder {
+  text-align: right;
+}
+
+.item-14 {
+  min-width: 0;
+  max-width: 50%;
+}
+
+/* --- Newsletter --- */
+
+.newsletter-set {
+  margin-top: 50px;
+  border-top: 2px solid rgba(0,0,0,.65);
+}
+
+.newsletter-container {
+  align-items: flex-start;
+}
+
+input[type="checkbox"],
+input[type="radio"] {
+  width: initial;
+}
+
+.news-item {
+  padding: .75em 0;
+  width: 100%;
+}
+
+.newsitem-1 {
+  padding-top: 0;
+}
+
+textarea {
+  margin-top: 20px;
+  min-height: 80px;
+}
+
+.newsitem-7 {
+  margin: 0 auto;
 }
 
 button {
   text-transform: uppercase;
+  font-size: 1.1em;
+  background-color: rgba(0,0,0,.65);
   color: ghostwhite;
-  font-weight: 500;
-  background-color: rgba(0,0,0,.7);
-  margin-top: 20px;
-  min-height: 65px;
 }
 
-button:focus {
+button:focus, button:hover {
   outline: 4px solid rgba(0,0,0,.6);
-  background-image: linear-gradient(to right, lightpink, orchid);         
-  color: black;
+  background-image: linear-gradient(to right, #009830 , #ffd300 90%);  
+  color: black;       
   transition: all .3s;
   box-shadow: 0 0 10px 6px rgba(0, 0, 0, 0.5);
+}
+
+/* --- Footer --- */
+
+footer {
+  padding: 15px 0;
 }
 
 /* --- Media Queries --- */
 
 @media screen and (min-width: 768px) {
 
-  .flex {
-    display: flex;
-    justify-content: space-between;
+  body {
+    font-size: 1.25em;
+  }
+
+  .contact-set legend:after {
+    content: "rmation";
+  }
+
+  .contact-container {
+    flex-direction: row;
+    flex-wrap: wrap;
     align-items: center;
   }
 
-  .flex label,
-  .flex input,
-  .flex select {
-    margin: 10px 0;
+  .contact-label, .contact-input {
+    min-width: initial;
+    margin: 0;
   }
 
-  .flex input,
-  .flex select {
-    width: 75%;
+  .contact-label {
+    flex: 0 0 30%;
   }
 
-  #zip {
-    width: 25%;
+  .contact-input {
+    flex: 0 0 70%;
   }
 
-  .flex-zip {
-    justify-content: flex-start;
-    gap: 73px;
+  .contact-input:last-of-type {
+    flex: 0 0 20%;
+  }
+
+  h2 {
+    font-size: 1.75rem;
   }
 
 }
